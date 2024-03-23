@@ -14,7 +14,7 @@ Use: `profiles.yml` located: `~/.dbt/profiles.yml` and test connection: `dbt deb
 
 > Models setup
 
-![Alt text](https://github.com/miroslaw-steblik/amazon-sales-dbt-airflow/blob/main/images/amazon_data_flow.png)
+![Alt text](https://github.com/miroslaw-steblik/amazon-sales-dbt-airflow/blob/main/extras/amazon_data_flow.png)
 
 Sales table has been pre-loaded using python script and serves as data source in the staging schema
 
@@ -40,7 +40,7 @@ Add `staging.yml` and `stg_sales_eph.sql` to load memory
 
 Apache Airflow is a platform for programmatically authoring, scheduling, and monitoring workflows. It is especially useful for creating and orchestrating complex data pipelines.
 
-![Alt text](https://github.com/miroslaw-steblik/amazon-sales-dbt-airflow/blob/main/images/cosmos.png)
+![Alt text](https://github.com/miroslaw-steblik/amazon-sales-dbt-airflow/blob/main/extras/cosmos.png)
 
 Instalation: `curl -sSL install.astronomer.io | sudo bash -s`
 
