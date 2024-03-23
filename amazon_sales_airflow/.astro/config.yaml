@@ -1,0 +1,6 @@
+project:
+    name: amazon-sales-airflow
+webserver:
+  port: 8080
+postgres:
+  port: 5435

@@ -1,0 +1,174 @@
+[0m16:25:47.427547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721c1c0c2b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721c1c6655d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721c1c664f70>]}
+
+
+============================== 16:25:47.429822 | 471dbbbb-3c11-490b-86b3-209d56360f5e ==============================
+[0m16:25:47.429822 [info ] [MainThread]: Running with dbt=1.7.10
+[0m16:25:47.430351 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/miros/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:25:47.430855 [info ] [MainThread]: dbt version: 1.7.10
+[0m16:25:47.431210 [info ] [MainThread]: python version: 3.10.12
+[0m16:25:47.431560 [info ] [MainThread]: python path: /home/miros/.cache/pypoetry/virtualenvs/amazon-sales-MEynCc2f-py3.10/bin/python
+[0m16:25:47.431905 [info ] [MainThread]: os info: Linux-6.5.0-26-generic-x86_64-with-glibc2.35
+[0m16:25:47.509434 [info ] [MainThread]: Using profiles dir at /home/miros/.dbt
+[0m16:25:47.509923 [info ] [MainThread]: Using profiles.yml file at /home/miros/.dbt/profiles.yml
+[0m16:25:47.510282 [info ] [MainThread]: Using dbt_project.yml file at /home/miros/DataOps/projects/amazon-sales/amazon_sales/dbt_project.yml
+[0m16:25:47.510833 [info ] [MainThread]: adapter type: postgres
+[0m16:25:47.511252 [info ] [MainThread]: adapter version: 1.7.10
+[0m16:25:47.511772 [info ] [MainThread]: Configuration:
+[0m16:25:47.512121 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:25:47.512460 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:25:47.512831 [info ] [MainThread]: Required dependencies:
+[0m16:25:47.513187 [debug] [MainThread]: Executing "git --help"
+[0m16:25:47.514702 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialise an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:25:47.515127 [debug] [MainThread]: STDERR: "b''"
+[0m16:25:47.515459 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:25:47.515809 [info ] [MainThread]: Connection:
+[0m16:25:47.516163 [info ] [MainThread]:   host: localhost
+[0m16:25:47.516506 [info ] [MainThread]:   port: 5432
+[0m16:25:47.516843 [info ] [MainThread]:   user: pagoda
+[0m16:25:47.517176 [info ] [MainThread]:   database: pagoda
+[0m16:25:47.517511 [info ] [MainThread]:   schema: analytics
+[0m16:25:47.517845 [info ] [MainThread]:   connect_timeout: 10
+[0m16:25:47.518296 [info ] [MainThread]:   role: None
+[0m16:25:47.518634 [info ] [MainThread]:   search_path: None
+[0m16:25:47.518972 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:25:47.519307 [info ] [MainThread]:   sslmode: None
+[0m16:25:47.519641 [info ] [MainThread]:   sslcert: None
+[0m16:25:47.519975 [info ] [MainThread]:   sslkey: None
+[0m16:25:47.520307 [info ] [MainThread]:   sslrootcert: None
+[0m16:25:47.520748 [info ] [MainThread]:   application_name: dbt
+[0m16:25:47.521081 [info ] [MainThread]:   retries: 1
+[0m16:25:47.521481 [info ] [MainThread]: Registered adapter: postgres=1.7.10
+[0m16:25:47.522075 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:25:47.522430 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:25:47.522766 [debug] [MainThread]: On debug: select 1 as id
+[0m16:25:47.523090 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:25:47.533718 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m16:25:47.534695 [debug] [MainThread]: On debug: Close
+[0m16:25:47.535177 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:25:47.535675 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:25:47.536073 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/miros/DataOps/projects/amazon-sales/amazon_sales/dbt_project.yml> not found
+
+[0m16:25:47.536924 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.15095785, "process_user_time": 1.877509, "process_kernel_time": 0.035875, "process_mem_max_rss": "94508", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m16:25:47.537613 [debug] [MainThread]: Command `dbt debug` failed at 16:25:47.537463 after 0.15 seconds
+[0m16:25:47.537995 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:25:47.538392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721c1c0c2b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721c1acd2f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721c19ce0ee0>]}
+[0m16:25:47.538797 [debug] [MainThread]: Flushing usage events
+[0m16:26:24.226733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x767c55fa3850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x767c543b5090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x767c543b4220>]}
+
+
+============================== 16:26:24.228966 | 57257c39-0b04-408c-ab12-2dcfb02b98b8 ==============================
+[0m16:26:24.228966 [info ] [MainThread]: Running with dbt=1.7.10
+[0m16:26:24.229450 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/miros/.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m16:26:24.229991 [info ] [MainThread]: dbt version: 1.7.10
+[0m16:26:24.230344 [info ] [MainThread]: python version: 3.10.12
+[0m16:26:24.230691 [info ] [MainThread]: python path: /home/miros/.cache/pypoetry/virtualenvs/amazon-sales-MEynCc2f-py3.10/bin/python
+[0m16:26:24.231036 [info ] [MainThread]: os info: Linux-6.5.0-26-generic-x86_64-with-glibc2.35
+[0m16:26:24.309347 [info ] [MainThread]: Using profiles dir at /home/miros/.dbt
+[0m16:26:24.309857 [info ] [MainThread]: Using profiles.yml file at /home/miros/.dbt/profiles.yml
+[0m16:26:24.310397 [info ] [MainThread]: Using dbt_project.yml file at /home/miros/DataOps/projects/amazon-sales/amazon_sales/dbt_project.yml
+[0m16:26:24.310906 [info ] [MainThread]: adapter type: postgres
+[0m16:26:24.311259 [info ] [MainThread]: adapter version: 1.7.10
+[0m16:26:24.311687 [info ] [MainThread]: Configuration:
+[0m16:26:24.312098 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:26:24.312503 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:26:24.312910 [info ] [MainThread]: Required dependencies:
+[0m16:26:24.313295 [debug] [MainThread]: Executing "git --help"
+[0m16:26:24.314862 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialise an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:26:24.315309 [debug] [MainThread]: STDERR: "b''"
+[0m16:26:24.315643 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:26:24.316066 [info ] [MainThread]: Connection:
+[0m16:26:24.316560 [info ] [MainThread]:   host: localhost
+[0m16:26:24.316957 [info ] [MainThread]:   port: 5432
+[0m16:26:24.317335 [info ] [MainThread]:   user: pagoda
+[0m16:26:24.317734 [info ] [MainThread]:   database: pagoda
+[0m16:26:24.318178 [info ] [MainThread]:   schema: analytics
+[0m16:26:24.318578 [info ] [MainThread]:   connect_timeout: 10
+[0m16:26:24.319041 [info ] [MainThread]:   role: None
+[0m16:26:24.319441 [info ] [MainThread]:   search_path: None
+[0m16:26:24.319836 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:26:24.320187 [info ] [MainThread]:   sslmode: None
+[0m16:26:24.320528 [info ] [MainThread]:   sslcert: None
+[0m16:26:24.320927 [info ] [MainThread]:   sslkey: None
+[0m16:26:24.321334 [info ] [MainThread]:   sslrootcert: None
+[0m16:26:24.321763 [info ] [MainThread]:   application_name: dbt
+[0m16:26:24.322176 [info ] [MainThread]:   retries: 1
+[0m16:26:24.322638 [info ] [MainThread]: Registered adapter: postgres=1.7.10
+[0m16:26:24.323448 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:26:24.323831 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:26:24.324180 [debug] [MainThread]: On debug: select 1 as id
+[0m16:26:24.324525 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:26:24.335163 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m16:26:24.336100 [debug] [MainThread]: On debug: Close
+[0m16:26:24.336518 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:26:24.336900 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:26:24.337305 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/miros/DataOps/projects/amazon-sales/amazon_sales/dbt_project.yml> not found
+
+[0m16:26:24.338164 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.1517746, "process_user_time": 1.824527, "process_kernel_time": 0.099592, "process_mem_max_rss": "94140", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m16:26:24.338929 [debug] [MainThread]: Command `dbt debug` failed at 16:26:24.338781 after 0.15 seconds
+[0m16:26:24.339307 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:26:24.339674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x767c55fa3850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x767c53d422f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x767c53d604c0>]}
+[0m16:26:24.340072 [debug] [MainThread]: Flushing usage events
+[0m16:35:04.479645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d832cbb33a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d832ad815d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d832ad80f70>]}
+
+
+============================== 16:35:04.481944 | 29c94e8c-eb10-4ed6-b852-fd08789f6c02 ==============================
+[0m16:35:04.481944 [info ] [MainThread]: Running with dbt=1.7.10
+[0m16:35:04.482436 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/home/miros/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m16:35:04.482942 [info ] [MainThread]: dbt version: 1.7.10
+[0m16:35:04.483300 [info ] [MainThread]: python version: 3.10.12
+[0m16:35:04.483648 [info ] [MainThread]: python path: /home/miros/.cache/pypoetry/virtualenvs/amazon-sales-MEynCc2f-py3.10/bin/python
+[0m16:35:04.483992 [info ] [MainThread]: os info: Linux-6.5.0-26-generic-x86_64-with-glibc2.35
+[0m16:35:04.562178 [info ] [MainThread]: Using profiles dir at /home/miros/.dbt
+[0m16:35:04.562637 [info ] [MainThread]: Using profiles.yml file at /home/miros/.dbt/profiles.yml
+[0m16:35:04.563008 [info ] [MainThread]: Using dbt_project.yml file at /home/miros/DataOps/projects/amazon-sales/amazon_sales/dbt_project.yml
+[0m16:35:04.563498 [info ] [MainThread]: adapter type: postgres
+[0m16:35:04.563860 [info ] [MainThread]: adapter version: 1.7.10
+[0m16:35:04.564226 [info ] [MainThread]: Configuration:
+[0m16:35:04.564579 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:35:04.564931 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:35:04.565280 [info ] [MainThread]: Required dependencies:
+[0m16:35:04.565643 [debug] [MainThread]: Executing "git --help"
+[0m16:35:04.567160 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialise an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:35:04.567590 [debug] [MainThread]: STDERR: "b''"
+[0m16:35:04.567929 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:35:04.568290 [info ] [MainThread]: Connection:
+[0m16:35:04.568653 [info ] [MainThread]:   host: localhost
+[0m16:35:04.569003 [info ] [MainThread]:   port: 5432
+[0m16:35:04.569349 [info ] [MainThread]:   user: pagoda
+[0m16:35:04.569693 [info ] [MainThread]:   database: pagoda
+[0m16:35:04.570044 [info ] [MainThread]:   schema: analytics
+[0m16:35:04.570388 [info ] [MainThread]:   connect_timeout: 10
+[0m16:35:04.570730 [info ] [MainThread]:   role: None
+[0m16:35:04.571080 [info ] [MainThread]:   search_path: None
+[0m16:35:04.571425 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:35:04.571771 [info ] [MainThread]:   sslmode: None
+[0m16:35:04.572114 [info ] [MainThread]:   sslcert: None
+[0m16:35:04.572455 [info ] [MainThread]:   sslkey: None
+[0m16:35:04.572797 [info ] [MainThread]:   sslrootcert: None
+[0m16:35:04.573140 [info ] [MainThread]:   application_name: dbt
+[0m16:35:04.573481 [info ] [MainThread]:   retries: 1
+[0m16:35:04.573895 [info ] [MainThread]: Registered adapter: postgres=1.7.10
+[0m16:35:04.574431 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:35:04.574803 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:35:04.575153 [debug] [MainThread]: On debug: select 1 as id
+[0m16:35:04.575494 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:35:04.585087 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m16:35:04.586038 [debug] [MainThread]: On debug: Close
+[0m16:35:04.586429 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:35:04.586805 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:35:04.587165 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/miros/DataOps/projects/amazon-sales/amazon_sales/dbt_project.yml> not found
+
+[0m16:35:04.587918 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.14898463, "process_user_time": 1.839882, "process_kernel_time": 0.067848, "process_mem_max_rss": "94788", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m16:35:04.588597 [debug] [MainThread]: Command `dbt debug` failed at 16:35:04.588449 after 0.15 seconds
+[0m16:35:04.588974 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:35:04.589357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d832cbb33a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d832b692f80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d832a75cee0>]}
+[0m16:35:04.589769 [debug] [MainThread]: Flushing usage events
